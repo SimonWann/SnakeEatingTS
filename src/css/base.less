@@ -1,0 +1,82 @@
+@bgColor: #b7d4a8;
+@bgBlue: #3689e6;
+@bgRed: #a10705;
+@bgGreen: #68b723;
+@lgRed: #ff8c82;
+@lsilver: #fafafa;
+.dBorder{
+
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    box-sizing: border-size;
+}
+#main{
+    width: 360px;
+    height: 460px;
+    margin: 50px auto;
+    background-color: darken(@lsilver, 2%);
+    border: 2px solid darken(@lsilver, 20%);
+    box-shadow: 0px 0px 5px darken(@lsilver, 20%);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    #stage{
+        width: 304px;
+        margin: 0px auto;
+        height: 304px;
+        border: 2px solid darken(@lsilver, 2%);
+        position: relative;
+        #snake{
+            div{
+                height: 10px;
+                width: 10px;
+                background-color: @bgRed;
+                border: 1px solid darken(@bgRed, 70%);
+                border-radius: 3px;
+                position: absolute;
+                box-shadow: 0px 0px 1px darken(@bgRed, 30%);
+            }
+        }
+        #food{
+            height: 10px;
+            width: 10px;
+            position: absolute;
+            left: 40px;
+            top: 100px;
+            display: flex;
+            background-color: @bgGreen;
+            border: 1px solid darken(@bgGreen, 70%);
+            border-radius: 3px;
+            box-shadow: 0px 0px 1.5px darken(@bgGreen, 30%);
+            overflow: hidden;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            div{
+                width: 4px;
+                height: 4px;
+                border-radius: 2.2px;
+                background-color: @bgRed;
+                // overflow: hidden;
+                border: 1px solid darken(@bgRed, 40%);
+            }
+        }
+    }
+    #score{
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        
+    }
+}
+body{
+    
+    font: bold 17px "Courier";
+    color: #555761;
+}
