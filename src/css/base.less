@@ -29,9 +29,12 @@
         width: 304px;
         margin: 0px auto;
         height: 304px;
-        border: 2px solid darken(@lsilver, 2%);
+        border: 1px dashed darken(@lsilver,20%);
+        border-radius: 3px;
         position: relative;
         #snake{
+            height: 10px;
+            width: 10px;
             div{
                 height: 10px;
                 width: 10px;
@@ -41,6 +44,11 @@
                 position: absolute;
                 box-shadow: 0px 0px 1px darken(@bgRed, 30%);
             }
+        }
+        .dead{
+            animation: dead 0.7s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
         }
         #food{
             height: 10px;
@@ -72,6 +80,27 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        #restart{
+            font-size: 12px;
+            color: #fff;
+            width: 70px;
+            padding: 5px 10px;
+            font-family: Sans-Serif;
+            font-weight: bold;
+            outline: none;
+            background-color: @bgRed;
+            border: 1px solid darken(@bgRed, 70%);
+            border-radius: 3px;
+            box-shadow: 0px 0px 1px darken(@bgRed, 30%);
+            &:hover{
+                animation: btnHover 0.5s forwards;
+            }
+            &:active{
+                box-shadow: 0px 0px 5px darken(@bgRed, 30%);
+                animation: btnClick 0.5s forwards;
+            }
+           
+        }
         
     }
 }

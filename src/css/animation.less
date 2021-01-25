@@ -1,0 +1,54 @@
+@bgColor: #b7d4a8;
+@bgBlue: #3689e6;
+@bgRed: #a10705;
+@bgGreen: #68b723;
+@lgRed: #ff8c82;
+@lsilver: #fafafa;
+@keyframes dead{
+    0%{
+        opacity: 100%;
+    }
+    13%{
+        opacity: 0%;
+    }
+    25%{
+        opacity: 100%;
+    }
+    37%{
+        opacity: 0%;
+    }
+    50%{
+        opacity: 100%;
+    }
+    63%{
+        opacity: 0%;
+    }
+    75%{
+        opacity: 100%;
+    }
+    87%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+@keyframes btnHover{
+    from{
+        background-color: @bgRed;
+    }
+    to{
+        background-color: lighten(@bgRed, 30%);
+        box-shadow: 0px 0px 5px darken(@bgRed, 30%);
+    }
+}
+@keyframes click{
+    from{
+        background-color: lighten(@bgRed, 30%);
+        box-shadow: 0px 0px 5px darken(@bgRed, 30%);
+    }
+    to{
+        background-color: lighten(@bgRed, -30%);
+        box-shadow: inset 0px 0px 5px darken(@bgRed, -40%);
+    }
+}

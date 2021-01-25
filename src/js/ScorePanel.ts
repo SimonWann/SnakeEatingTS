@@ -30,6 +30,12 @@ class ScorePanel{
         this.level++
         this.levelEle.innerHTML = this.level + ''
     }
+    getLevel() {
+        return this.level
+    }
+    setLevel(value: number) {
+        this.level = value
+    }
     
 }
 export default ScorePanel
